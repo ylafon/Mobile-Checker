@@ -46,6 +46,7 @@ var checklist = [
         './lib/checks/compatibility/flash-detection'), require(
         './lib/checks/compatibility/css-prefixes'), require(
         './lib/checks/interactions/alert'), require(
+        './lib/checks/performance/exif'), require(
         './lib/checks/interactions/touchscreen-target')
 ];
 
@@ -93,7 +94,7 @@ io.on('connection', function(socket) {
             }
         });
         urlSafetyChecker.checkUrlSafety(data.url, function(err, result) {
-            if (result != false) {
+            if (result !== false) {
                 socket.emit('start', 3);
                 setTimeout(function() {
                     fs.readdir("lib/tips", function(err, files) {
@@ -122,7 +123,7 @@ io.on('connection', function(socket) {
             } else {
                 socket.emit('unsafeUrl', data.url);
             }
-        })
+        });
 
     });
 });
