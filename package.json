@@ -20,6 +20,8 @@
 	    "css": "2.1.0",
         "ip": "0.3.1",
         "q": "1.0.1",
+        "image-headers":"0.3.3",
+        "binary-reader":"0.1.2",
         "safe-url-input-checker":"0.0.2"
     },
     "devDependencies": {
