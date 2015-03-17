@@ -134,15 +134,15 @@ var tests = {
         "exif": [{
             doc: "firework.jpg",
             errors: [{
-                name: "performance.compression.images-could-be-unexified",
+                name: "performance.exif.images-could-be-unexified",
                 data: {
                     number: 1,
                     minifiable: [{
                         url: "http://localhost:3001/docs/firework.jpg",
                         origSize: 106571,
-                        diff: 65589
+                        diff: 65532
                     }],
-                    saving: 65589
+                    saving: 65532
                 }
             }]
         }]
